@@ -11,7 +11,7 @@ JsmvcDocsBuilder 概述
 修改 docsName 您的API文档名称
 其它的配置可以使用默认值
 
-2.生成文档
+2. 生成文档
 执行 startup.bat
 根据提示输入选项或者一路按回车即可
 
@@ -19,19 +19,22 @@ JsmvcDocsBuilder 概述
 
 ### 代码注释规范
 
-只会生成以下格式的注释
-/**
- * 注释内容
- *
- */
+只会生成 /** */ 这样包含起来的注释
  
  @type 类型，值：class object function attr，表明为是一个类、一个对象、一个方法、一个属性
+
  @desc 描述信息，可以是一行或者多行
+ 
  @example 创建一个例子，例子代码可以用 <code></code>包含起来
+ 
  @name 名称
+ 
  @param 参数，值 aaa:bbb 说明。aaa为参数名称，bbb为参数类型
+ 
  @returns 返回值，值  类型 说明
+ 
  @value 指明一个属性值的类型
+ 
  @modification 指明修饰符，值：pro pub sta，表明为是一个保护方法、公共方法、静态方法
  
  您可以参考  <https://github.com/kally788/jsmvc/tree/master/$jsmvc$> 中的注释格式

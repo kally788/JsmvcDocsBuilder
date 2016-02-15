@@ -15,7 +15,7 @@ JsmvcDocsBuilder 概述
 执行 startup.bat
 根据提示输入选项或者一路按回车即可
 
-如果在linux下打包，需要自己写一个sh脚本。可参考startup.bat脚本
+3. 如果在linux下打包，需要自己写一个sh脚本。可参考startup.bat脚本
 
 ### 代码注释规范
 

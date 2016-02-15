@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta charset="utf-8">
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+    <META HTTP-EQUIV="expires" CONTENT="0">
+    <META http-equiv="X-UA-Compatible" content="IE=edge" >
+    <title>JsMvc API</title>
+    <style>
+        body{margin-left: 0px;margin-top: 0px;margin-right: 0px;margin-bottom: 0px;}
+        html {overflow: visible;}
+    </style>
+    <link rel="icon" href="images/jsmvc.ico" type="image/x-icon"/>
+    <script type="text/javascript" src="$jsmvc$/run.js?v=v1_0" charset="utf-8"></script>
+    <script>
+        //资源加载顺序 CSS->JS->HTML（同步加载）
+        //样式文件，并行加载
+        var css = [
+            "css/css.css",
+            "css/shCore.css",
+            "css/shThemeRDark.css"
+        ];
+        //脚本文件，二维数组内容为并行加载，一维数组内容为同步加载
+        var js = [
+            ["$library$/jquery.js","$library$/shCore.js"],//框架依赖jq库，必须优先加载
+            [
+                //并行加载框架、外部库和您的项目代码
+                "$library$/fastclick.js",
+                "$library$/shBrushJScript.js",
+                "$library$/json2.js",
+                "$jsmvc$/core/FacadeAbs.js",
+                "$jsmvc$/core/PageAbs.js",
+                "$jsmvc$/core/ModelAbs.js",
+                "js/model/Language.js",
+                "js/model/MenuList.js",
+                "js/model/ContList.js",
+                "js/page/Layout.js",
+                "js/page/Menu.js",
+                "js/page/Cont.js",
+                "js/tpl/LayoutTpl.js",
+                "js/tpl/MenuTpl.js",
+                "js/tpl/ContTpl.js",
+                "js/startup.js"
+            ]
+        ];
+    </script>
+</head>
+<body onload="$jsmvc$.run.start(css, js, null, null, new Date().getTime());"></body>
+</html>
